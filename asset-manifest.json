@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/array-dash/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/array-dash/static/js/main.b6b32d8b.chunk.js",
+    "main.js.map": "/array-dash/static/js/main.b6b32d8b.chunk.js.map",
+    "runtime-main.js": "/array-dash/static/js/runtime-main.56c89341.js",
+    "runtime-main.js.map": "/array-dash/static/js/runtime-main.56c89341.js.map",
+    "static/js/2.01857c3b.chunk.js": "/array-dash/static/js/2.01857c3b.chunk.js",
+    "static/js/2.01857c3b.chunk.js.map": "/array-dash/static/js/2.01857c3b.chunk.js.map",
+    "static/js/3.60e5fed1.chunk.js": "/array-dash/static/js/3.60e5fed1.chunk.js",
+    "static/js/3.60e5fed1.chunk.js.map": "/array-dash/static/js/3.60e5fed1.chunk.js.map",
+    "index.html": "/array-dash/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/array-dash/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.01857c3b.chunk.js.LICENSE.txt": "/array-dash/static/js/2.01857c3b.chunk.js.LICENSE.txt",
+    "static/media/TechnaSans-Regular.d9579ef3.otf": "/array-dash/static/media/TechnaSans-Regular.d9579ef3.otf",
+    "static/media/arraylogofinal.1e09ee7d.png": "/array-dash/static/media/arraylogofinal.1e09ee7d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.56c89341.js",
+    "static/js/2.01857c3b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.b6b32d8b.chunk.js"
+  ]
+}
