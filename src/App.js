@@ -15,6 +15,7 @@ import Main from './components/Main/Main';
 function App() {
   const gecko = Gecko.coingecko()
   const [open, setOpen] =useState(false)
+  const [depositing, setDepositing] = useState(true)
 
   const [state, setState] = useState({
     provider: undefined,
@@ -50,25 +51,14 @@ function App() {
   })
 
  
-  const tokens = [
-    {
-      id:0,
-      name: 'farm',
-      address: '0xa0246c9032bC3A600820415aE600c6388619A14D'
-    },
-    {
-      id:1,
-      name: 'pickle',
-      address: `0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5`
-    },
-  ]
+  
   const getTokenPrices = () => {
     
       gecko.getPrice('0xa0246c9032bC3A600820415aE600c6388619A14D')
       .then(res => {
         console.log(res.toString() / 1000000)
        
-        setFinancialData({...financialData,farm_price: res.toString() / 1000000})
+        setFinancialData((financialData) => ({...financialData,farm_price: res.toString() / 1000000}))
       })
       .catch(err => {
         console.log(err)
@@ -79,7 +69,7 @@ function App() {
     .then(res => {
       console.log(res.toString() / 1000000)
      
-      setFinancialData({...financialData,pickle_price: res.toString() / 1000000})
+      setFinancialData((financialData) => ({...financialData,pickle_price: res.toString() / 1000000}))
     })
     .catch(err => {
       console.log(err)
@@ -90,7 +80,7 @@ function App() {
     axios.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
     .then(res => {
       console.log(res.data.ethereum['usd'])
-      setFinancialData({...financialData,eth_price: res.data.ethereum['usd'] })
+      setFinancialData((financialData) => ({...financialData,eth_price: res.data.ethereum['usd'] }))
     })
     .catch(err => {
       console.log(err)
@@ -98,11 +88,11 @@ function App() {
   }
 
   useEffect(() => {
-    if(financialData.pickle_price === 0) {
-      getTokenPrices()
-    }
     
-  },[financialData.pickle_price])
+      getTokenPrices()
+    
+    
+  },[])
   useEffect(() => {
     const timer = setTimeout(() => {
       state.manager && getTokenPrices();
@@ -111,7 +101,7 @@ function App() {
   });
   console.log(financialData)
   return (
-    <UIC.Provider value={{open,setOpen,state, setState,financialData}}>
+    <UIC.Provider value={{open,setOpen,state, setState,financialData,depositing,setDepositing}}>
       <Application>
         <Navigation />
         <Main />

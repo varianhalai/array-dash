@@ -1,8 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
+import UIC from '../../../../context/Context';
 import styled from 'styled-components';
 
 const ArrayInteractions = () => {
-
+    const {depositing} = useContext(UIC);
     const [values,setValues] = useState({
         value1: 0,
         value2: 0,
@@ -46,10 +47,16 @@ const ArrayInteractions = () => {
                         <button>max</button>
                     </div>
                 </div>
-                <button 
-                name='value1' 
-                onClick={deposit}
-                className="deposit">deposit</button>
+                {depositing ? <button 
+                    name='value1' 
+                    onClick={deposit}
+                    className="deposit">deposit
+                </button> : <button 
+                    name='value1' 
+                    onClick={deposit}
+                    className="withdraw">withdraw
+                </button>}
+
                 <div className="rewards-description">
                     <p className='reward-apy'>129.4% APY</p>
                     <p className="reward-breakdown">112% FARM +</p>
@@ -70,10 +77,15 @@ const ArrayInteractions = () => {
                         <button>max</button>
                     </div>
                 </div>
-                <button 
-                onClick={deposit}
-                name='value2'
-                className="deposit">deposit</button>
+                {depositing ? <button 
+                    name='value1' 
+                    onClick={deposit}
+                    className="deposit">deposit
+                </button> : <button 
+                    name='value1' 
+                    onClick={deposit}
+                    className="withdraw">withdraw
+                </button>}
 
                 <div className="rewards-description">
                     <p className='reward-apy'>129.4% APY</p>
@@ -168,7 +180,7 @@ const Interaction = styled.div `
             }
             
         }
-        .deposit {
+        button {
             background: transparent;
             color: white;
             font-size: 1.5em;
@@ -236,7 +248,7 @@ const Interaction = styled.div `
                 }
                 
             }
-            .deposit {
+            button {
                 background: transparent;
                 color: white;
                 font-size: 1.4em;
@@ -321,7 +333,7 @@ const Interaction = styled.div `
                 }
                 
             }
-            .deposit {
+            button {
                 background: transparent;
                 color: white;
                 font-size: 1.3em;
@@ -409,7 +421,7 @@ const Interaction = styled.div `
                 }
                 
             }
-            .deposit {
+            button {
                 background: transparent;
                 color: white;
                 font-size: 1.2em;

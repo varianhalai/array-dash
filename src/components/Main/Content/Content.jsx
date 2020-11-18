@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 //components
+import Switch from '../switch/Switch';
 //row1
 import Balance from './balance/Balance';
 import Staked from './staked/Staked';
@@ -31,6 +32,9 @@ const Content = () => {
             <Row className='not-top'>
                 <FarmInteractions />
                 <PickleInteractions />
+            </Row>
+            <Row>
+                <Switch />
             </Row>
            
         </ContentContainer>
