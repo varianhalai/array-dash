@@ -13,7 +13,7 @@ const Balance = () => {
             </div>
             <div className="container-content">
                 <div className="content-left">
-                    <p className="array-balance">{balance.array_balance}</p>
+                    <p className="array">{balance.array_balance}</p>
                     <p className="pickle-balance">{balance.pickle_balance}</p>
                     <p className="farm-balance">{balance.farm_balance}</p>
                 </div>
@@ -38,6 +38,7 @@ const BalanceContainer =  styled.div`
     background-color: ${style.lightBackground};
     border: ${style.mainBorder};
     color: white;
+    height: 100%;
    
 
     .container-header {
@@ -51,11 +52,11 @@ const BalanceContainer =  styled.div`
         
         h4 {
             margin: 0;
-            font-size: 2em;
+            font-size: 3em;
         }
         h6 {
             margin: 0;
-            font-size: 1em;
+            font-size: 1.3em;
         }
     }
     .container-content {
@@ -63,7 +64,7 @@ const BalanceContainer =  styled.div`
         justify-content: space-between;
         align-items: center;
         padding: 5px 15px;
-        height: 50%;
+        height: 52%;
         border-bottom: ${style.mainBorder};
         .content-left {
             display: flex;
@@ -71,7 +72,7 @@ const BalanceContainer =  styled.div`
             justify-content: center;
             align-items: flex-start;
             .array-balance {
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
         }
@@ -85,21 +86,22 @@ const BalanceContainer =  styled.div`
 
         p {
             margin: 5px 0;
-            font-size: 1.1em;
+            font-size: 1.8em;
             text-align: left;
         }
         .array {
-            font-size: 1.5em;
+            font-size: 2em;
         }
     }
     .container-footer {
         
         padding: 5px 15px;
         p {
-            font-size: 1.4em;
+            font-size: 1.6em;
             margin: 0;
         }
     }
+    
 
     @media(max-width: 1920px) {
 
@@ -137,11 +139,11 @@ const BalanceContainer =  styled.div`
             
             h4 {
                 margin: 0;
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             h6 {
                 margin: 0;
-                font-size: .9em;
+                font-size: .8em;
             }
         }
         .container-content {
@@ -160,7 +162,7 @@ const BalanceContainer =  styled.div`
         
             padding: 5px 15px;
             p {
-                font-size: 1.2em;
+                font-size: 1em;
                 margin: 0;
             }
         }
@@ -206,7 +208,7 @@ const BalanceContainer =  styled.div`
     }
     //max-width: 1280px
 
-    @media(min-width: 2800px) {
+    @media(min-width: 3700px) {
 
         .container-header {
             display: flex;

@@ -51,21 +51,28 @@ const ContentContainer = styled.div`
     justify-content: flex-start;
     height: 100vh;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
 `;
 
 const Row = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 65%;
+    width: 80%;
     
 
     &.not-top {
         margin-top: 30px;
+        @media(max-width: 1440px) {
+            margin-top: 20px;
+        }
     }
     &.switch {
         justify-content: flex-start;
+        @media(max-width: 1280px) {
+            margin-top: -15px;
+        }
+       
     }
     @media(max-width: 1920px) {
         width: 80%;

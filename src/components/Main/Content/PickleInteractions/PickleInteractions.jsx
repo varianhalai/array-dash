@@ -158,7 +158,7 @@ export default PickleInteractions;
 
 
 const Interaction = styled.div `
-width: 47%;
+width: 46%;
 display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,12 +245,12 @@ display: flex;
             cursor: pointer;
         }
         .deposit {
-            width: 20%;
+            width: 22%;
             margin-right: 30px;
             transtiion: a;ll 300ms ease;
         }
         .withdraw {
-            width: 20%;
+            width: 22%;
             margin-right: 30px;
         }
         .rewards-description {
@@ -385,14 +385,14 @@ display: flex;
                 }
                 .input-and-max {
                     input {
-                        font-size: 1.3em;
+                        font-size: 1.2em;
                         border: 3px solid white;
                         background-color: #121212;
                         color: white;
                         padding: 2%;
                     }
                     button {
-                        font-size: 1.3em;
+                        font-size: 1.2em;
                         padding: 2%;
                         
                     }
@@ -402,7 +402,7 @@ display: flex;
             button {
                 background: transparent;
                 color: white;
-                font-size: 1.3em;
+                font-size: 1.2em;
                 border: 3px solid white;
                 padding: 1%;
                 cursor: pointer;
@@ -465,13 +465,13 @@ display: flex;
             .input-container {
                 .input-description {
                     width: 20%;
-                    font-size: 1.2em;
+                    font-size: 1em;
                     margin: 0;
                 }
                 .input-and-max {
 
                     input {
-                        font-size: 1.2em;
+                        font-size: 1em;
                         border: 3px solid white;
                         background-color: #121212;
                         color: white;
@@ -480,7 +480,7 @@ display: flex;
                     button {
                         background-color: transparent;
                         color: white;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         padding: 2%;
                         
                     }
@@ -490,7 +490,7 @@ display: flex;
             button {
                 background: transparent;
                 color: white;
-                font-size: 1.2em;
+                font-size: 1em;
                 border: 3px solid white;
                 padding: 1%;
                 cursor: pointer;

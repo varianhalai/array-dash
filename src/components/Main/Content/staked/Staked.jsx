@@ -13,7 +13,7 @@ const Staked = () => {
             </div>
             <div className="container-content">
                 <div className="content-left">
-                    <p className="array-staked">{staked.array_staked}</p>
+                    <p className="array">{staked.array_staked}</p>
                     <p className="pickle-staked">{staked.pickle_staked}</p>
                     <p className="farm-staked">{staked.farm_staked}</p>
                 </div>
@@ -35,178 +35,10 @@ export default Staked;
 
 const StakedContainer =  styled.div`
 width: 30%;
-background-color: ${style.lightBackground};
-border: ${style.mainBorder};
-color: white;
-
-
-.container-header {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: flex-start;
-    padding: 15px;
-    height: 30%;
-    border-bottom: ${style.mainBorder};
-    
-    h4 {
-        margin: 0;
-        font-size: 2em;
-    }
-    h6 {
-        margin: 0;
-        font-size: 1em;
-    }
-}
-.container-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 15px;
-    height: 50%;
-    border-bottom: ${style.mainBorder};
-    .content-left {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: flex-start;
-        .array-staked {
-            font-size: 1.5em;
-        }
-
-    }
-    .content-right {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: flex-end;
-
-    }
-
-    p {
-        margin: 5px 0;
-        font-size: 1.1em;
-        text-align: left;
-    }
-    .array {
-        font-size: 1.5em;
-    }
-}
-.container-footer {
-    
-    padding: 5px 15px;
-    p {
-        font-size: 1.4em;
-        margin: 0;
-    }
-}
-
-@media(max-width: 1920px) {
-
-    .container-header {
-        
-        
-        h4 {
-            margin: 0;
-            font-size: 1.7em;
-        }
-        h6 {
-            margin: 0;
-            font-size: .9em;
-        }
-    }
-    .container-content {
-        padding: 0 15px;
-
-        p {
-            margin: 3px 0;
-            font-size: 1.1em;
-            text-align: left;
-        }
-        .array {
-            font-size: 1.5em;
-        }
-    }
-
-}
-//max-width: 1920px
-@media(max-width: 1440px) {
-
-    .container-header {
-        padding: 10px;
-        
-        h4 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        h6 {
-            margin: 0;
-            font-size: .9em;
-        }
-    }
-    .container-content {
-        padding: 0 15px;
-
-        p {
-            margin: 3px 0;
-            font-size: 1em;
-            text-align: left;
-        }
-        .array {
-            font-size: 1.3em;
-        }
-    }
-    .container-footer {
-    
-        padding: 5px 15px;
-        p {
-            font-size: 1.2em;
-            margin: 0;
-        }
-    }
-
-}
-//max-width: 1440px
-
-@media(max-width: 1280px) {
-
-    .container-header {
-        padding: 5px;
-        
-        h4 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-        h6 {
-            margin: 0;
-            font-size: .9em;
-        }
-    }
-    .container-content {
-        padding: 0 15px;
-
-        p {
-            margin: 3px 0;
-            font-size: .9em;
-            text-align: left;
-        }
-        .array {
-            font-size: 1.2em;
-        }
-    }
-    .container-footer {
-    
-        padding: 5px 15px;
-        p {
-            font-size: 1.1em;
-            margin: 0;
-        }
-    }
-
-}
-//max-width: 1280px
-
-@media(min-width: 2800px) {
+    background-color: ${style.lightBackground};
+    border: ${style.mainBorder};
+    color: white;
+    height: 100%;
 
     .container-header {
         display: flex;
@@ -219,19 +51,27 @@ color: white;
         
         h4 {
             margin: 0;
-            font-size: 5em;
+            font-size: 3em;
         }
         h6 {
             margin: 0;
-            font-size: 2em;
+            font-size: 1.3em;
         }
     }
     .container-content {
-       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        height: 52%;
+        border-bottom: ${style.mainBorder};
         .content-left {
-           
-            .array-staked {
-                font-size: 2.5em;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
+            .array-balance {
+                font-size: 2em;
             }
 
         }
@@ -244,22 +84,183 @@ color: white;
         }
 
         p {
-            margin: 5px 0;
-            font-size: 2em;
+            
+            font-size: 1.8em;
             text-align: left;
         }
         .array {
-            font-size: 2.5em;
+            font-size: 2em;
         }
     }
     .container-footer {
         
         padding: 5px 15px;
         p {
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin: 0;
         }
     }
-//max-width:2800px
+    
 
+    @media(max-width: 1920px) {
+
+        .container-header {
+            
+            
+            h4 {
+                margin: 0;
+                font-size: 1.7em;
+            }
+            h6 {
+                margin: 0;
+                font-size: .9em;
+            }
+        }
+        .container-content {
+            padding: 0 15px;
+    
+            p {
+                margin: 3px 0;
+                font-size: 1.1em;
+                text-align: left;
+            }
+            .array {
+                font-size: 1.5em;
+            }
+        }
+
+    }
+    //max-width: 1920px
+    @media(max-width: 1440px) {
+
+        .container-header {
+            padding: 10px;
+            
+            h4 {
+                margin: 0;
+                font-size: 1.3em;
+            }
+            h6 {
+                margin: 0;
+                font-size: .8em;
+            }
+        }
+        .container-content {
+            padding: 0 15px;
+    
+            p {
+                margin: 3px 0;
+                font-size: 1em;
+                text-align: left;
+            }
+            .array {
+                font-size: 1.3em;
+            }
+        }
+        .container-footer {
+        
+            padding: 5px 15px;
+            p {
+                font-size: 1em;
+                margin: 0;
+            }
+        }
+
+    }
+    //max-width: 1440px
+
+    @media(max-width: 1280px) {
+
+        .container-header {
+            padding: 5px;
+            
+            h4 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+            h6 {
+                margin: 0;
+                font-size: .9em;
+            }
+        }
+        .container-content {
+            padding: 0 15px;
+    
+            p {
+                margin: 3px 0;
+                font-size: .9em;
+                text-align: left;
+            }
+            .array {
+                font-size: 1.2em;
+            }
+        }
+        .container-footer {
+        
+            padding: 5px 15px;
+            p {
+                font-size: 1.1em;
+                margin: 0;
+            }
+        }
+
+    }
+    //max-width: 1280px
+
+    @media(min-width: 3700px) {
+
+        .container-header {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
+            padding: 15px;
+            height: 30%;
+            border-bottom: ${style.mainBorder};
+            
+            h4 {
+                margin: 0;
+                font-size: 5em;
+            }
+            h6 {
+                margin: 0;
+                font-size: 2em;
+            }
+        }
+        .container-content {
+           
+            .content-left {
+               
+                .array-balance {
+                    font-size: 2.5em;
+                }
+    
+            }
+            .content-right {
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+                align-items: flex-end;
+    
+            }
+    
+            p {
+                margin: 5px 0;
+                font-size: 2em;
+                text-align: left;
+            }
+            .array {
+                font-size: 2.5em;
+            }
+        }
+        .container-footer {
+            
+            padding: 5px 15px;
+            p {
+                font-size: 1.8em;
+                margin: 0;
+            }
+        }
+    //max-width:2800px
+    
 `;

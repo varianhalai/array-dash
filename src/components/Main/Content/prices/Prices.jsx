@@ -137,29 +137,40 @@ color: white;
 }
 
 @media(max-width: 1280px) {
-    .container-header { 
+    
+    .container-header {
         padding: 5px 15px;
-       
+        
         h4 {
-            
-            font-size: 1.4em;
+            margin: -10px auto 9px auto;
+            font-size: 2em;
         }
         .trade-array {
-            font-size: 1em;
+            font-size: 1.1em;
+            padding: 5px; 
         }
     }
     .container-content {
-       
-    
+        padding: 0 15px;
+
         p {
-            margin: 0;
-            font-size: 1.2em;
+            margin: 3px 0;
+            font-size: .9em;
             text-align: left;
         }
         .array {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
+    .container-footer {
+    
+        padding: 5px 15px;
+        p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+    }
+
 }
 //max-width: 1280px
 

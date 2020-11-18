@@ -27,49 +27,71 @@ const Switch = () => {
 export default Switch;
 
 const Switchy = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-width: 17%;
-height: 2.6rem;
-left: 2%;
-top: 30px;
-    * Hide default HTML checkbox */
-    .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 10%;
+    height: 2.6rem;
+    left: 2.5%;
+    top: 30px;
+        * Hide default HTML checkbox */
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
 
-   
-    button {
-        background: transparent;
-        color: white;
-        font-size: 1.5em;
-       height: 40px;
-        padding: 1%;
-        cursor: pointer;
-    }
-    .deposit {
-        width: 50%;
-        width: 50%;
-        border-top: ${style.mainBorder};
-        border-left: ${style.mainBorder};
-        border-bottom: ${style.mainBorder};
-       
-    }
-    .withdraw {
-        width: 50%;
-        border-top: ${style.mainBorder};
-        border-right: ${style.mainBorder};
-        border-bottom: ${style.mainBorder};
-       
-    }
-    .placeholder {
-        width: 50%;
-        border: ${style.mainBorder};
-        height: 40px;
-    }
+    
+        button {
+            background: transparent;
+            color: white;
+            font-size: 1.5em;
+            height: 40px;
+            padding: 1%;
+            cursor: pointer;
+        }
+        .deposit {
+            width: 50%;
+            width: 50%;
+            border-top: ${style.mainBorder};
+            border-left: ${style.mainBorder};
+            border-bottom: ${style.mainBorder};
+        
+        }
+        .withdraw {
+            width: 50%;
+            border-top: ${style.mainBorder};
+            border-right: ${style.mainBorder};
+            border-bottom: ${style.mainBorder};
+        
+        }
+        .placeholder {
+            width: 50%;
+            border: ${style.mainBorder};
+            height: 40px;
+        }
+        @media(max-width: 2556px) {
+            width: 12%;
+        }
+        @media(max-width: 2556px) {
+            width: 15%;
+        }
+        @media(max-width: 1920px) {
+            width: 16%;
+        }
+        @media(max-width: 1440px) {
+            width: 18%;
+            button {
+                
+                font-size: 1.2em;
+               
+            }
+        }
+        @media(max-width: 1280px) {
+            button {
+                font-size: 1em;
+            }
+        }
 
 `;

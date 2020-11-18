@@ -15,13 +15,13 @@ const ArrayFinancialDisplay = () => {
             
             <div className="container-content">
                 <div className="content-left">
-                    <p className="array-price">Array </p>
+                    <p className="array">Array </p>
                     <p className="array-market-cap">MarketCap </p>
                     <p className="array-staked-apy">StakedAPY </p>
                     <p className="array-locked">Locked </p>
                 </div>
                 <div className="content-right">
-                    <p className='array-price'>${financialData.array_price}</p>
+                    <p className='array'>${financialData.array_price}</p>
                     <p>${financialData.array_market_cap}</p>
                     <p>{financialData.array_staked_apy}%</p>
                     <p>{financialData.array_locked}%</p>
@@ -37,47 +37,231 @@ const ArrayFinancialDisplay = () => {
 export default ArrayFinancialDisplay;
 
 const FinancialContainer =  styled.div`
-    width: 30%;
-    background-color: ${style.lightBackground};
-    border: ${style.mainBorder};
-    color: white;
+width: 30%;
+background-color: ${style.lightBackground};
+border: ${style.mainBorder};
+color: white;
+height: 100%;
+
+
+.container-header {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    height: 30%;
+   
     
+    h4 {
+        margin: 0;
+        font-size: 2.2em;
+        text-align: center;
+    }
+    h6 {
+        margin: 0;
+        font-size: 1.3em;
+    }
+}
+.container-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    height: 70%;
+   
+    .content-left {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: flex-start;
+        .array-balance {
+            font-size: 2em;
+        }
+
+    }
+    .content-right {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 1.8em;
+        text-align: left;
+    }
+    .array {
+        font-size: 2em;
+    }
+}
+.container-footer {
+    
+    padding: 5px 15px;
+    p {
+        font-size: 1.6em;
+        margin: 0;
+    }
+}
+
+@media(max-width: 2556px) {
+
+    .container-header {
+        
+        
+        h4 {
+            margin: 0;
+            font-size: 2.3em;
+        }
+       
+    }
+    .container-content {
+        padding: 0 15px;
+
+        p {
+            margin: 3px 0;
+            font-size: 1.5em;
+            text-align: left;
+        }
+        .array {
+            font-size: 1.5em;
+        }
+    }
+
+}
+//max-width: 2556px
+
+
+@media(max-width: 1920px) {
+
+    .container-header {
+        
+        
+        h4 {
+            margin: 0;
+            font-size: 1.7em;
+        }
+        h6 {
+            margin: 0;
+            font-size: .9em;
+        }
+    }
+    .container-content {
+        padding: 0 15px;
+
+        p {
+            margin: 3px 0;
+            font-size: 1.1em;
+            text-align: left;
+        }
+        .array {
+            font-size: 1.5em;
+        }
+    }
+
+}
+//max-width: 1920px
+@media(max-width: 1440px) {
+
+    .container-header {
+        padding: 10px;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        h6 {
+            margin: 0;
+            font-size: .8em;
+        }
+    }
+    .container-content {
+        padding: 0 15px;
+
+        p {
+            margin: 3px 0;
+            font-size: 1em;
+            text-align: left;
+        }
+        .array {
+            font-size: 1.3em;
+        }
+    }
+    .container-footer {
+    
+        padding: 5px 15px;
+        p {
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+
+}
+//max-width: 1440px
+
+@media(max-width: 1280px) {
+
+    .container-header {
+        padding: 5px;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.25em;
+        }
+        h6 {
+            margin: 0;
+            font-size: .9em;
+        }
+    }
+    .container-content {
+        padding: 0 15px;
+
+        p {
+            margin: 4px 0;
+            font-size: .9em;
+            text-align: left;
+        }
+        .array {
+            font-size: 1.2em;
+        }
+    }
+    .container-footer {
+    
+        padding: 5px 15px;
+        p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+    }
+
+}
+//max-width: 1280px
+
+@media(min-width: 3700px) {
 
     .container-header {
         display: flex;
         flex-direction: column; 
         justify-content: center;
         align-items: flex-start;
-        padding: 10px;
+        padding: 15px;
         height: 30%;
-        border-bottom: ${style.mainBorder};
+        
         
         h4 {
-            margin: 0 auto;
-            font-size: 1.8em;
-            width: 95%;
-            text-align: center;
-
-        }
-        h6 {
             margin: 0;
-            font-size: 1em;
+            font-size: 3.2em;
         }
+        
     }
     .container-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 15px;
-        height: 50%;
-        
+       
         .content-left {
-            display: flex;
-            flex-direction: column; 
-            justify-content: center;
-            align-items: flex-start;
-            .array-price {
-                font-size: 1.5em;
+           
+            .array-balance {
+                font-size: 2.5em;
             }
 
         }
@@ -90,149 +274,22 @@ const FinancialContainer =  styled.div`
         }
 
         p {
-            margin: 5px 0;
-            font-size: 1.2em;
+            margin: 7px 0;
+            font-size: 2em;
             text-align: left;
         }
         .array {
-            font-size: 1.5em;
+            font-size: 2.5em;
         }
     }
-    @media(max-width: 1920px) {
-
-        .container-header {
-            
-            
-            h4 {
-                margin: 0;
-                font-size: 1.4em;
-            }
-            h6 {
-                margin: 0;
-                font-size: 1em;
-            }
-        }
-
-        .container-content {
-            
-    
-            p {
-                margin: 3px 0;
-                font-size: 1.3em;
-                text-align: left;
-            }
-            .array {
-                font-size: 1.5em;
-            }
-        }
-
-    }
-    //max-width: 1920px
-    
-    @media(max-width: 1440px) {
+    .container-footer {
         
-        .container-header {
-            
-            
-            h4 {
-                margin: 0;
-                font-size: 1.3em;
-            }
-            
+        padding: 5px 15px;
+        p {
+            font-size: 1.8em;
+            margin: 0;
         }
-
-        .container-content {
-            
-    
-            p {
-                margin: 3px 0;
-                font-size: 1.1em;
-                text-align: left;
-            }
-        }
-
     }
-    //max-width: 1440px
+//max-width:2800px
 
-    @media(max-width: 1280px) {
-        
-        .container-header {
-            padding: 5px 10px;
-            
-            h4 {
-                margin: 0;
-                font-size: 1.1em;
-            }
-            
-        }
-
-        .container-content {
-            
-    
-            p {
-                margin: 3px 0;
-                font-size: 1.1em;
-                text-align: left;
-            }
-        }
-
-    }
-    //max-width: 1280px
-
-    @media(min-width: 2800px) {
-
-        .container-header {
-            display: flex;
-            flex-direction: column; 
-            justify-content: center;
-            align-items: flex-start;
-            padding: 5px 15px;
-            height: 30%;
-            border-bottom: ${style.mainBorder};
-            
-            h4 {
-                margin: 0;
-                font-size: 2.8em;
-            }
-            
-        }
-        .container-content {
-           
-            .content-left {
-               
-                .array-price {
-                    font-size: 2.5em;
-                }
-    
-            }
-            .content-right {
-                display: flex;
-                flex-direction: column; 
-                justify-content: center;
-                align-items: flex-end;
-                .array-price {
-                font-size: 2.5em;
-                
-                }
-    
-            }
-    
-            p {
-                margin: 5px 0;
-                font-size: 1.8em;
-                text-align: left;
-            }
-            
-            
-        }
-        .container-footer {
-            
-            padding: 5px 15px;
-            p {
-                font-size: 1.8em;
-                margin: 0;
-            }
-        }
-    //max-width:2800px
-    
 `;

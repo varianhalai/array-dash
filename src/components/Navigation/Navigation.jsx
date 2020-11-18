@@ -212,6 +212,113 @@ const Nav = styled.div`
     }
     //max-width: 2000px
 
+    @media(max-width: 1920px) {
+        display: flex;
+        padding: 0 130px;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: ${style.darkBackground};
+        border-bottom: ${style.thinBorder};
+        color: white;
+        .nav-left {
+           
+        
+            nav {
+                margin-left: 10px;
+                a {
+                    font-size: 1.9em;
+                    padding: 0px 10px;
+                    margin: 0 40px;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 400ms ease-in;
+                    
+                }
+                .dashboard {
+                    border: 3px solid white;
+                }
+            }
+        }
+        
+        
+
+        .connect {
+            font-size: 1.9em;
+            &:hover {
+                border: 3px solid white;
+                background-color: ${style.lightBackground};
+                top: 2px;
+            }
+            
+        }
+
+        .address {
+            font-size: 1.3em;
+             
+        }
+
+        .fas {
+            display: none;
+    }
+    //max-width: 1920px
+
+    @media(max-width: 1440px) {
+        display: flex;
+        padding: 0 50px;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: ${style.darkBackground};
+        border-bottom: ${style.thinBorder};
+        color: white;
+        .nav-left {
+            display: flex;
+            align-items: center;
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        
+            nav {
+                margin-left: 10px;
+                a {
+                    font-size: 1.5em;
+                    padding: 0px 10px;
+                    margin: 0 20px;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 400ms ease-in;
+                    
+                }
+                .dashboard {
+                    border: 3px solid white;
+                }
+            }
+        }
+        
+        
+
+        .connect {
+            font-size: 1.5em;
+            &:hover {
+                border: 3px solid white;
+                background-color: ${style.lightBackground};
+                top: 2px;
+            }
+            
+        }
+
+        .address {
+            font-size: 1.3em;
+             
+        }
+
+        .fas {
+            display: none;
+    }
+    //max-width: 1440px
+
     @media(max-width: 970px) {
         padding-left: 50px;
         img {

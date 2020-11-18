@@ -103,10 +103,11 @@ const ArrayInteractions = () => {
 export default ArrayInteractions;
 
 const Interaction = styled.div `
-    width: 62%;
+    width: 63%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     
     
     background-color: #212121;
@@ -374,6 +375,7 @@ const Interaction = styled.div `
     //max-width: 1440px
 
     @media(max-width: 1280px) {
+        height: 100%;
         .interact-header {
             display: flex;
             align-items: center;
@@ -389,14 +391,14 @@ const Interaction = styled.div `
             }
             
             .header-left {
-                font-size: 1.1em;
+                font-size: 1em;
                 h4 {
                     font-size: 1.3em;
                 }
                 
             }
             .header-right {
-                font-size: 1.1em;
+                font-size: 1em;
                 h4 {
                     font-size: 1.3em;
                 }
@@ -477,7 +479,7 @@ const Interaction = styled.div `
             }
             
             .header-left {
-                font-size: 2em;
+                font-size: 1.8em;
                 h4 {
                     font-size: 2em;
                 }
