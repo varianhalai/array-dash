@@ -166,6 +166,37 @@ const Info = styled.div`
         }
     }
     //max-width: 1280px
+
+    @media(min-width: 2800px) {
+        height: 98vh;
+        h1 {
+            font-size: 8em;
+            margin-bottom: 20px;
+        }
+        .phase-description {
+            font-size: 2.9em;
+        }
+        .phase-subtext {
+            padding-bottom: 0;
+            font-size: 2em;
+        }
+        .social {
+            padding-top: 24%;
+            .social-heading {
+                font-size: 4em;
+                border: 3px solid white;
+                width: 90%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .social-links {
+                .fab {
+                    font-size: 4.5em;
+                }
+            }
+        }
+    }
+    //max-width: 1280px
     
 
 

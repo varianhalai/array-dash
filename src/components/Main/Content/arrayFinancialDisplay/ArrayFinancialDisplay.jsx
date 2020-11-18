@@ -21,7 +21,7 @@ const ArrayFinancialDisplay = () => {
                     <p className="array-locked">Locked </p>
                 </div>
                 <div className="content-right">
-                    <p className='array'>${financialData.array_price}</p>
+                    <p className='array-price'>${financialData.array_price}</p>
                     <p>${financialData.array_market_cap}</p>
                     <p>{financialData.array_staked_apy}%</p>
                     <p>{financialData.array_locked}%</p>
@@ -178,5 +178,61 @@ const FinancialContainer =  styled.div`
 
     }
     //max-width: 1280px
+
+    @media(min-width: 2800px) {
+
+        .container-header {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
+            padding: 5px 15px;
+            height: 30%;
+            border-bottom: ${style.mainBorder};
+            
+            h4 {
+                margin: 0;
+                font-size: 2.8em;
+            }
+            
+        }
+        .container-content {
+           
+            .content-left {
+               
+                .array-price {
+                    font-size: 2.5em;
+                }
+    
+            }
+            .content-right {
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+                align-items: flex-end;
+                .array-price {
+                font-size: 2.5em;
+                
+                }
+    
+            }
+    
+            p {
+                margin: 5px 0;
+                font-size: 1.8em;
+                text-align: left;
+            }
+            
+            
+        }
+        .container-footer {
+            
+            padding: 5px 15px;
+            p {
+                font-size: 1.8em;
+                margin: 0;
+            }
+        }
+    //max-width:2800px
     
 `;

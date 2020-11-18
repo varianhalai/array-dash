@@ -516,4 +516,92 @@ display: flex;
     }
     //max-width: 1280px
 
+    @media(min-width: 2800px) {
+        .interact-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 3px solid white;
+            padding: 5px 10px;
+            width: 100%;
+            h4 {
+                margin: 0;
+            }
+            h6 {
+                margin: 0;
+            }
+            
+            .header-left {
+                font-size: 1.8em;
+                h4 {
+                    font-size: 2.3em;
+                }
+                
+            }
+            .header-right {
+                font-size: 1.8em;
+                h4 {
+                    font-size: 2em;
+                }
+                
+            }
+        }
+
+        .interact-input {
+            padding: 20px; 
+            .input-container {
+                .input-description {
+                    width: 20%;
+                    font-size: 2em;
+                    margin: 0;
+                }
+                .input-and-max {
+
+                    input {
+                        font-size: 2em;
+                        border: 3px solid white;
+                        background-color: #121212;
+                        color: white;
+                        padding: 2%;
+                    }
+                    button {
+                        background-color: transparent;
+                        color: white;
+                        font-size: 2em;
+                        padding: 2%;
+                        
+                    }
+                }
+                
+            }
+            button {
+                background: transparent;
+                color: white;
+                font-size: 2em;
+                border: 3px solid white;
+                padding: 1%;
+                cursor: pointer;
+            }
+            .rewards-description {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    margin: 0;
+                }
+                .reward-apy {
+                    font-size: 2em;
+                }
+                .reward-breakdown {
+                    font-size: 1em;
+                }
+            }
+    
+    
+            
+    
+        }
+    }
+    //max-width: 2800px
+
 `;

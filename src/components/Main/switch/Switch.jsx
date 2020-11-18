@@ -5,19 +5,20 @@ import {style} from '../../../styles/appStyles';
 
 const Switch = () => {
     const {depositing,setDepositing} = useContext(UIC);
+
+    const makeWithdrawals = () => {
+        setDepositing(false)
+    }
+    const makeDeposits = () => {
+        setDepositing(true)
+    }
     return (
         <Switchy>
             
-            <label className="switch">
-                <input
-                type="checkbox"
-                checked={depositing}
-                onChange={() =>
-                    setDepositing(!depositing)
-                }
-                />
-                <div className="slider round">{depositing ? <p className="left">withdraw</p> : <p className="right">deposit</p> }</div>
-            </label>
+            {depositing ? <div className="placeholder"></div> : <button onClick={makeDeposits} className="deposit">deposit</button> }
+            {depositing ? <button onClick={makeWithdrawals} className="withdraw">withdraw</button> : <div className="placeholder"></div> }
+
+            
                   
         </Switchy>
     );
@@ -26,9 +27,11 @@ const Switch = () => {
 export default Switch;
 
 const Switchy = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
 position: relative;
-display: inline-block;
-width: 8rem;
+width: 17%;
 height: 2.6rem;
 left: 2%;
 top: 30px;
@@ -39,69 +42,34 @@ top: 30px;
     height: 0;
     }
 
-    /* The slider */
-    .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0 5px;
-    background-color: ${style.lightBackground};
-    -webkit-transition: .4s;
-    transition: .4s;
-    p {
-        margin-top: 7px;
-        font-size: 1.2em;
-        color: white;
-    }
-    .right {
-        float: right;
-        
-    }
-    }
-
-    
-
-    .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.9rem;
-    width: 1.9rem;
-    left: 3px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
    
+    button {
+        background: transparent;
+        color: white;
+        font-size: 1.5em;
+       height: 40px;
+        padding: 1%;
+        cursor: pointer;
     }
-
-    input:checked + .slider {
-    background-color: ${style.lightBackground};
+    .deposit {
+        width: 50%;
+        width: 50%;
+        border-top: ${style.mainBorder};
+        border-left: ${style.mainBorder};
+        border-bottom: ${style.mainBorder};
+       
     }
-
-    input:focus + .slider {
-    box-shadow: 0 0 1px ${style.lightBackground};
+    .withdraw {
+        width: 50%;
+        border-top: ${style.mainBorder};
+        border-right: ${style.mainBorder};
+        border-bottom: ${style.mainBorder};
+       
     }
-
-    input:checked + .slider:before {
-    -webkit-transform: translateX(5.3rem);
-    -ms-transform: translateX(5.3rem);
-    transform: translateX(5.3rem);
-    }
-
-    /* Rounded sliders */
-    .slider.round {
-    border-radius: .5rem;
-    }
-
-    .slider.round:before {
-    border-radius: .5rem;
-    }
-
-    input[type="button"]:focus, button:focus {
-        outline: none;
+    .placeholder {
+        width: 50%;
+        border: ${style.mainBorder};
+        height: 40px;
     }
 
 `;

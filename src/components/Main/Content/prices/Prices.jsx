@@ -21,7 +21,7 @@ const Prices = () => {
                     <p>FARM</p>
                 </div>
                 <div className="content-right">
-                    <p className='array-price'>${financialData.array_price ? financialData.array_price : "---"}</p>
+                    <p className='array'>${financialData.array_price ? financialData.array_price : "---"}</p>
                     <p>${financialData.eth_price ? financialData.eth_price : " ---"}</p>
                     <p>${financialData.pickle_price ? financialData.pickle_price : "---" }</p>
                     <p>${financialData.farm_price ? financialData.farm_price : "---"}</p>
@@ -122,10 +122,7 @@ color: white;
         }
     }
     .container-content {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
+        
         padding: 5px 15px;
     
         p {
@@ -152,11 +149,7 @@ color: white;
         }
     }
     .container-content {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        padding: 5px 15px;
+       
     
         p {
             margin: 0;
@@ -168,6 +161,34 @@ color: white;
         }
     }
 }
+//max-width: 1280px
+
+@media(min-width: 2800px) {
+    .container-header { 
+        padding: 5px 15px;
+       
+        h4 {
+            
+            font-size: 5em;
+        }
+        .trade-array {
+            font-size: 3em;
+        }
+    }
+    .container-content {
+       
+    
+        p {
+            margin: 11px 0;
+            font-size: 1.8em;
+            text-align: left;
+        }
+        .array {
+            font-size: 2.5em;
+        }
+    }
+}
+//min-width: 2800px
 
     
 `;
