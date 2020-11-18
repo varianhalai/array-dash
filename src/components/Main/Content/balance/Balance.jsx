@@ -1,8 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import UIC from '../../../../context/Context';
 import styled from 'styled-components';
 import  {style} from '../../../../styles/appStyles';
 
 const Balance = () => {
+    const {balance,financialData} = useContext(UIC);
     return (
         <BalanceContainer>
             <div className="container-header">
@@ -10,9 +12,17 @@ const Balance = () => {
                 <h6>volume $12.8M</h6>
             </div>
             <div className="container-content">
-                <p className='array'>ARRAY</p>
-                <p>PICKLE</p>
-                <p>FARM</p>
+                <div className="content-left">
+                    <p className="array-balance">{balance.array_balance}</p>
+                    <p className="pickle-balance">{balance.pickle_balance}</p>
+                    <p className="farm-balance">{balance.farm_balance}</p>
+                </div>
+                <div className="content-right">
+                    <p className='array'>ARRAY</p>
+                    <p>PICKLE</p>
+                    <p>FARM</p>
+                </div>
+                
             </div>
             <div className="container-footer">
                 <p>pending</p>
@@ -50,12 +60,28 @@ const BalanceContainer =  styled.div`
     }
     .container-content {
         display: flex;
-        height: 50%;
-        flex-direction: column; 
-        justify-content: center;
-        align-items: flex-end;
+        justify-content: space-between;
+        align-items: center;
         padding: 5px 15px;
+        height: 50%;
         border-bottom: ${style.mainBorder};
+        .content-left {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
+            .array-balance {
+                font-size: 1.5em;
+            }
+
+        }
+        .content-right {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-end;
+
+        }
 
         p {
             margin: 5px 0;

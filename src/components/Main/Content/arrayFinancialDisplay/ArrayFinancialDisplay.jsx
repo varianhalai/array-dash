@@ -1,21 +1,34 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import UIC from '../../../../context/Context';
 import styled from 'styled-components';
 import  {style} from '../../../../styles/appStyles';
 
 const ArrayFinancialDisplay = () => {
+    const {financialData} = useContext(UIC);
     return (
         <FinancialContainer>
             <div className="container-header">
             
-                <h4>Array is curently managing $XXX,XXX,XXX in assets</h4>
+                <h4>Array is curently managing ${financialData.array_total_assets} in assets</h4>
             
             </div>
+            
             <div className="container-content">
-                <p>Array - $19.12</p>
-                <p>MarketCap - $20.12M</p>
-                <p>StakedAPY - 102.48%</p>
-                <p>Locked - 82%</p>
+                <div className="content-left">
+                    <p className="array-price">Array </p>
+                    <p className="array-market-cap">MarketCap </p>
+                    <p className="array-staked-apy">StakedAPY </p>
+                    <p className="array-locked">Locked </p>
+                </div>
+                <div className="content-right">
+                    <p className='array'>${financialData.array_price}</p>
+                    <p>${financialData.array_market_cap}</p>
+                    <p>{financialData.array_staked_apy}%</p>
+                    <p>{financialData.array_locked}%</p>
+                </div>
+                
             </div>
+           
             
         </FinancialContainer>
     );
@@ -41,7 +54,7 @@ const FinancialContainer =  styled.div`
         
         h4 {
             margin: 0 auto;
-            font-size: 1.45em;
+            font-size: 1.8em;
             width: 95%;
             text-align: center;
 
@@ -53,14 +66,32 @@ const FinancialContainer =  styled.div`
     }
     .container-content {
         display: flex;
-        flex-direction: column; 
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 5px 15px;
+        height: 50%;
+        
+        .content-left {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-start;
+            .array-price {
+                font-size: 1.5em;
+            }
+
+        }
+        .content-right {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-end;
+
+        }
 
         p {
             margin: 5px 0;
-            font-size: 1.4em;
+            font-size: 1.2em;
             text-align: left;
         }
         .array {

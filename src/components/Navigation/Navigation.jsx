@@ -183,7 +183,7 @@ const Nav = styled.div`
         background-color: transparent;
         font-size: 2.6em;
         color: white;
-        background-color: ${style.lightBackground};
+        background-color: ${style.darkBackground};
         border: none;
         padding:  5px 10px;
         transition: all 300ms ease;
@@ -192,6 +192,7 @@ const Nav = styled.div`
 
         &:hover {
             border: 3px solid white;
+            background-color: ${style.lightBackground};
             top: 2px;
         }
         

@@ -60,7 +60,7 @@ const Info = styled.div`
         width: 100%;
         display: flex;
         margin: 30px 40px 30px 30px;
-        padding-top: 25%;
+        padding-top: 5%;
         display: flex;
         flex-direction: column;
         align-items: center;

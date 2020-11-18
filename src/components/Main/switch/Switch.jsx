@@ -16,7 +16,7 @@ const Switch = () => {
                     setDepositing(!depositing)
                 }
                 />
-                <span className="slider round"></span>
+                <div className="slider round">{depositing ? <p className="left">withdraw</p> : <p className="right">deposit</p> }</div>
             </label>
                   
         </Switchy>
@@ -28,9 +28,9 @@ export default Switch;
 const Switchy = styled.div`
 position: relative;
 display: inline-block;
-width: 6rem;
+width: 8rem;
 height: 2.6rem;
-right: 44%;
+left: 2%;
 top: 30px;
     * Hide default HTML checkbox */
     .switch input {
@@ -47,32 +47,34 @@ top: 30px;
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 0 5px;
     background-color: ${style.lightBackground};
     -webkit-transition: .4s;
     transition: .4s;
+    p {
+        margin-top: 7px;
+        font-size: 1.2em;
+        color: white;
     }
+    .right {
+        float: right;
+        
+    }
+    }
+
+    
 
     .slider:before {
     position: absolute;
     content: "";
     height: 1.9rem;
     width: 1.9rem;
-    left: 4px;
+    left: 3px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-    @media(max-width: 500px) {
-        height: 1.7rem;
-        width: 1.7rem;
-    }
-    @media(max-width: 380px) {
-        height: 1.5rem;
-        width: 1.5rem;
-        top: .22rem;
-        right: .1rem;
-        left: .1rem;
-    }
+   
     }
 
     input:checked + .slider {
@@ -84,9 +86,9 @@ top: 30px;
     }
 
     input:checked + .slider:before {
-    -webkit-transform: translateX(3.3rem);
-    -ms-transform: translateX(3.3rem);
-    transform: translateX(3.3rem);
+    -webkit-transform: translateX(5.3rem);
+    -ms-transform: translateX(5.3rem);
+    transform: translateX(5.3rem);
     }
 
     /* Rounded sliders */

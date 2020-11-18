@@ -103,10 +103,11 @@ const ArrayInteractions = () => {
 export default ArrayInteractions;
 
 const Interaction = styled.div `
+    width: 62%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 62%;
+    
     
     background-color: #212121;
     color: white;
@@ -152,12 +153,12 @@ const Interaction = styled.div `
             justify-content: space-between;
             width: 60%;
             .input-description {
-                width: 20%;
+                width: 10%;
                 font-size: 1.5em;
                 margin: 0;
             }
             .input-and-max {
-                width: 50%;
+                width: 60%;
                 input {
                     font-size: 1.5em;
                     width: 50%;
@@ -175,8 +176,8 @@ const Interaction = styled.div `
                     border-bottom: 3px solid white;
                     border-left: none;
                     padding: 2%;
-                    
                 }
+                
             }
             
         }
@@ -188,7 +189,16 @@ const Interaction = styled.div `
             padding: 1%;
             cursor: pointer;
         }
+        .deposit {
+            width: 20%;
+            margin-right: 30px;
+        }
+        .withdraw {
+            width: 20%;
+            margin-right: 30px;
+        }
         .rewards-description {
+            width: 20%;
             display: flex;
             flex-direction: column;
             align-items: center;

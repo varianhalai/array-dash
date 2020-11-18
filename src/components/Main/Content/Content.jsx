@@ -33,7 +33,7 @@ const Content = () => {
                 <FarmInteractions />
                 <PickleInteractions />
             </Row>
-            <Row>
+            <Row className='switch'>
                 <Switch />
             </Row>
            
@@ -63,6 +63,9 @@ const Row = styled.div`
 
     &.not-top {
         margin-top: 30px;
+    }
+    &.switch {
+        justify-content: flex-start;
     }
     @media(max-width: 1920px) {
         width: 80%;
