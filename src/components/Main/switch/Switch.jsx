@@ -31,7 +31,7 @@ const Switchy = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 10%;
+    width: 13%;
     height: 2.6rem;
     left: 2.5%;
     top: 30px;
@@ -72,7 +72,7 @@ const Switchy = styled.div`
             height: 40px;
         }
         @media(max-width: 2556px) {
-            width: 12%;
+            width: 14%;
         }
         @media(max-width: 2556px) {
             width: 15%;
