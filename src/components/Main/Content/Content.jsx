@@ -31,7 +31,6 @@ const Content = () => {
             <Row className='not-top'>
                 <FarmInteractions />
                 <PickleInteractions />
-
             </Row>
            
         </ContentContainer>

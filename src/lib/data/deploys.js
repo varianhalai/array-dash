@@ -64,6 +64,11 @@ const assets = [
     address: '0xa0246c9032bc3a600820415ae600c6388619a14d',
   },
   {
+    name: 'PICKLE',
+    decimals: 18,
+    address: '0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5',
+  },
+  {
     name: 'USDC',
     decimals: 6,
     address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',

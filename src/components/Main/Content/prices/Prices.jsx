@@ -1,8 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import UIC from '../../../../context/Context';
 import styled from 'styled-components';
 import  {style} from '../../../../styles/appStyles';
 
 const Prices = () => {
+    const {financialData} =useContext(UIC);
     return (
         <TradeContainer>
             <div className="container-header">
@@ -12,10 +14,10 @@ const Prices = () => {
         
             </div>
             <div className="container-content">
-                <p>Array - $19.12</p>
-                <p>MarketCap - $20.12M</p>
-                <p>StakedAPY - 102.48%</p>
-                <p>Locked - 82%</p>
+                <p>Array - ${financialData.array_price ? financialData.array_price : "---"}</p>
+                <p>ETH - ${financialData.eth_price ? financialData.eth_price : " ---"}</p>
+                <p>Pickle - ${financialData.pickle_price ? financialData.pickle_price : "---" }</p>
+                <p>Farm - ${financialData.farm_price ? financialData.farm_price : "---"}</p>
             </div>
         
     
